@@ -44,8 +44,8 @@ RUN mkdir -p ${ANDROID_HOME}/licenses && \
 
 # Install packages
 RUN mkdir /root/.android && touch /root/.android/repositories.cfg
-RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --proxy=${proxy_protocol} --proxy_host=${proxy_server} --proxy_port=${proxy_port} --licenses 
-RUN ${ANDROID_HOME}/tools/bin/sdkmanager --proxy=${proxy_protocol} --proxy_host=${proxy_server} --proxy_port=${proxy_port} \
+RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses 
+RUN ${ANDROID_HOME}/tools/bin/sdkmanager \
   tools \
   platform-tools \
   "platforms;android-25" \
