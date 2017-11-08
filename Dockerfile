@@ -2,7 +2,7 @@ FROM openjdk
 
 # Install node
 ENV NVM_DIR /root/.nvm
-ENV NODE_VERSION 8.8.0
+ENV NODE_VERSION 8.9.1
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 RUN . ${NVM_DIR}/nvm.sh && \
